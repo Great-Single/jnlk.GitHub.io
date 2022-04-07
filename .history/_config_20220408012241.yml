@@ -58,4 +58,4 @@ ignore: null
 theme: icarus
 deploy:
   type: git
-  repo: 'https://github.com/Great-Single/jnlk.GitHub.io.git'
+  repo: 'https://github.com/Great-Single/jnlkblog.github.io.git'
