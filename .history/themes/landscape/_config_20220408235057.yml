@@ -37,4 +37,7 @@ fb_admins:
 fb_app_id:
 
 # RSS
-rss: /atom.xml
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20

@@ -4,7 +4,7 @@ version: 4.0.0
 variant: default
 # Path or URL to the website's logo
 logo:
-    text: Jnlk's Blog
+    text: Jnlk Blog
 # Page metadata configurations
 head:
     # URL or path to the website's icon
@@ -18,7 +18,7 @@ head:
         # when there is not enough space to display full name
         short_name: 江南浪客
         # The start URL of the web application
-        start_url: www.jnlk.zone
+        start_url: blog.jnlk.zone
         # The default theme color for the application
         theme_color: 
         # A placeholder background color for the application page to display
@@ -43,7 +43,7 @@ head:
         title: 
         # Page type (og:type) (optional)
         # You should leave this blank for most of the time
-        type: 
+        type: blog
         # Page URL (og:url) (optional)
         # You should leave this blank for most of the time
         url: 
@@ -55,12 +55,12 @@ head:
         site_name: 
         # Page author (article:author) (optional)
         # You should leave this blank for most of the time
-        author: 
+        author: 江南浪客
         # Page description (og:description) (optional)
         # You should leave this blank for most of the time
-        description: 
+        description: 一个爱好教育与科学技术的 Blogger
         # Twitter card type (twitter:card)
-        twitter_card: summary_large_image
+        twitter_card: 
         # Twitter ID (twitter:creator)
         twitter_id: 
         # Twitter Site (twitter:site)
@@ -95,7 +95,7 @@ head:
         # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
         - ''
     # URL or path to the website's RSS atom.xml
-    rss: "atom.xml"
+    rss: 
 # Page top navigation bar configurations
 navbar:
     # Navigation menu items
