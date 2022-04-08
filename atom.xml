@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>江南浪客的博客</title>
+  
+  <subtitle>我在 GitHub Pages 部署的 Hexo 博客</subtitle>
+  <link href="http://blog.jnlk.com/atom.xml" rel="self"/>
+  
+  <link href="http://blog.jnlk.com/"/>
+  <updated>2022-04-07T17:20:52.506Z</updated>
+  <id>http://blog.jnlk.com/</id>
+  
+  <author>
+    <name>江南浪客</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 PicGo 上传图片到 SM.MS 图床</title>
+    <link href="http://blog.jnlk.com/2021/02/14/%E4%BD%BF%E7%94%A8-PicGo-%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%88%B0-SM-MS-%E5%9B%BE%E5%BA%8A/"/>
+    <id>http://blog.jnlk.com/2021/02/14/%E4%BD%BF%E7%94%A8-PicGo-%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%88%B0-SM-MS-%E5%9B%BE%E5%BA%8A/</id>
+    <published>2021-02-14T14:47:47.000Z</published>
+    <updated>2022-04-07T17:20:52.506Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨天，轻狂测试了一下<a href="https://www.flighty.cn/html/tutorial/20200217_576.html">使用 PicGo+GitHub 打造最稳定可靠的免费图床</a>，但是由于众所周知的原因，GitHub在国内的访问速度有点慢，可能会影响页面的加载速度。那么，今天轻狂就来试试 SM.MS 图床。</p><span id="more"></span><p><strong>一、SM.MS 图床</strong></p><p>其实轻狂之前就注册了 SM.MS 图床，只是测试了一下速度，并没有正式使用，注册账号我就不多说了，自己去 SM.MS 上注册就行了，地址：<a href="https://sm.ms/">https://sm.ms/</a> </p><p>登录之后，我们要到 <a href="https://sm.ms/home/apitoken">https://sm.ms/home/apitoken</a> 生成一个 Secret Token 以备后用。</p><p><strong>二、PicGo 设置</strong></p><p>到 PicGo-插件设置里面搜索一个插件：picgo-plugin-smms-user，点击安装。</p><p>注意：安装这个插件需要用到 Node.js，没有安装的小伙伴要先安装一下，地址：<a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a></p><p>点击图床设置-SM.MS-登录用户（不是那个SM.MS图床，那个接口已经失效了），把上面我们申请到的 Secret Token 填写进去点击 确定 保存，设为默认图床即可体验啦。</p><p><strong>总结：</strong><br>经过测试，目前我用的网络环境下，SM.MS图床，要比 Github 速度快一些。</p><p>原文链接：<a href="https://www.flighty.cn/html/tutorial/20200218_579.html">https://www.flighty.cn/html/tutorial/20200218_579.html</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;昨天，轻狂测试了一下&lt;a href=&quot;https://www.flighty.cn/html/tutorial/20200217_576.html&quot;&gt;使用 PicGo+GitHub 打造最稳定可靠的免费图床&lt;/a&gt;，但是由于众所周知的原因，GitHub在国内的访问速度有点慢，可能会影响页面的加载速度。那么，今天轻狂就来试试 SM.MS 图床。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="问题记录" scheme="http://blog.jnlk.com/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="转载" scheme="http://blog.jnlk.com/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm 在安装的时候提示 没有权限操作的解决办法 Error EACCES permission denied</title>
+    <link href="http://blog.jnlk.com/2021/02/14/npm-%E5%9C%A8%E5%AE%89%E8%A3%85%E7%9A%84%E6%97%B6%E5%80%99%E6%8F%90%E7%A4%BA-%E6%B2%A1%E6%9C%89%E6%9D%83%E9%99%90%E6%93%8D%E4%BD%9C%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95-Error-EACCES-permission-denied/"/>
+    <id>http://blog.jnlk.com/2021/02/14/npm-%E5%9C%A8%E5%AE%89%E8%A3%85%E7%9A%84%E6%97%B6%E5%80%99%E6%8F%90%E7%A4%BA-%E6%B2%A1%E6%9C%89%E6%9D%83%E9%99%90%E6%93%8D%E4%BD%9C%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95-Error-EACCES-permission-denied/</id>
+    <published>2021-02-14T14:27:45.000Z</published>
+    <updated>2022-04-07T17:20:52.505Z</updated>
+    
+    <content type="html"><![CDATA[<p>在安装插件的时候出现这样的错误，权限不够，是因为之前用 <code>root</code> 用户进行了局部安装npm包的操作，留下所属权为 <code>root</code> 的文件，导致普通用户无法访问 <code>root</code>的文件内容。</p><span id="more"></span><h2 id="报错日志如下："><a href="#报错日志如下：" class="headerlink" title="报错日志如下："></a>报错日志如下：</h2><p><img src="https://img-blog.csdnimg.cn/20190326155116447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbUJpbmc=,size_16,color_FFFFFF,t_70" alt="image"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! path /Users/Kyle/.npm/_cacache/index-v5/d8/1f/98ab242d0cbad080828ef3e3f4b864c25e506a719121c293fec810b14b3c</span><br><span class="line">npm ERR! code EACCES</span><br><span class="line">npm ERR! errno -13</span><br><span class="line">npm ERR! syscall open</span><br><span class="line">npm ERR! Error: EACCES: permission denied, open <span class="string">&#x27;/Users/Kyle/.npm/_cacache/index-v5/d8/1f/98ab242d0cbad080828ef3e3f4b864c25e506a719121c293fec810b14b3c&#x27;</span></span><br><span class="line">npm ERR!  &#123; [Error: EACCES: permission denied, open <span class="string">&#x27;/Users/Kyle/.npm/_cacache/index-v5/d8/1f/98ab242d0cbad080828ef3e3f4b864c25e506a719121c293fec810b14b3c&#x27;</span>]</span><br><span class="line">npm ERR!   cause:</span><br><span class="line">npm ERR!    &#123; Error: EACCES: permission denied, open <span class="string">&#x27;/Users/Kyle/.npm/_cacache/index-v5/d8/1f/98ab242d0cbad080828ef3e3f4b864c25e506a719121c293fec810b14b3c&#x27;</span></span><br><span class="line">npm ERR!      errno: -13,</span><br><span class="line">npm ERR!      code: <span class="string">&#x27;EACCES&#x27;</span>,</span><br><span class="line">npm ERR!      syscall: <span class="string">&#x27;open&#x27;</span>,</span><br><span class="line">npm ERR!      path:</span><br><span class="line">npm ERR!       <span class="string">&#x27;/Users/Kyle/.npm/_cacache/index-v5/d8/1f/98ab242d0cbad080828ef3e3f4b864c25e506a719121c293fec810b14b3c&#x27;</span> &#125;,</span><br><span class="line">npm ERR!   isOperational: <span class="literal">true</span>,</span><br><span class="line">npm ERR!   stack:</span><br><span class="line">npm ERR!    <span class="string">&#x27;Error: EACCES: permission denied, open \&#x27;</span>/Users/Kyle/.npm/_cacache/index-v5/d8/1f/98ab242d0cbad080828ef3e3f4b864c25e506a719121c293fec810b14b3c\<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">npm ERR!   errno: -13,</span><br><span class="line">npm ERR!   code: <span class="string">&#x27;EACCES&#x27;</span>,</span><br><span class="line">npm ERR!   syscall: <span class="string">&#x27;open&#x27;</span>,</span><br><span class="line">npm ERR!   path:</span><br><span class="line">npm ERR!    <span class="string">&#x27;/Users/Kyle/.npm/_cacache/index-v5/d8/1f/98ab242d0cbad080828ef3e3f4b864c25e506a719121c293fec810b14b3c&#x27;</span>,</span><br><span class="line">npm ERR!   parent: <span class="string">&#x27;findup-sync&#x27;</span> &#125;</span><br><span class="line">npm ERR! </span><br><span class="line">npm ERR! The operation was rejected by your operating system.</span><br><span class="line">npm ERR! It is likely you <span class="keyword">do</span> not have the permissions to access this file as the current user</span><br><span class="line">npm ERR! </span><br><span class="line">npm ERR! If you believe this might be a permissions issue, please double-check the</span><br><span class="line">npm ERR! permissions of the file and its containing directories, or try running</span><br><span class="line">npm ERR! the <span class="built_in">command</span> again as root/Administrator (though this is not recommended).</span><br><span class="line"></span><br><span class="line">npm ERR! A complete <span class="built_in">log</span> of this run can be found <span class="keyword">in</span>:</span><br><span class="line">npm ERR!     /Users/Kyle/.npm/_logs/2019-03-26T07_00_54_812Z-debug.log</span><br></pre></td></tr></table></figure><h2 id="错误原因："><a href="#错误原因：" class="headerlink" title="错误原因："></a>错误原因：</h2><p>找到报错的文件，会看到它的所有者是 <code>root</code>。<br>之前用 <code>root</code> 进行了局部的安装操作，导致这个文件的所有者是 <code>root</code> ，还包括 <code>.npm</code> 文件夹下部分文件夹的所有权，也是 <code>root</code>，普通用户当然就无权访问了。就会报权限错误。</p><p><img src="https://img-blog.csdnimg.cn/20190326155214466.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbUJpbmc=,size_16,color_FFFFFF,t_70" alt="image"></p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>就是把用户目录下的 <code>.npm</code> 文件夹所有权都改成当前用户即可。<br>比如：当前用户名为 <code>Kyle</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">chown</span> -R Kyle ~/.npm </span><br></pre></td></tr></table></figure><p>执行后输入 root 密码，文件所属已改为当前用户了，再执行操作就不会出现了。</p><p><img src="https://img-blog.csdnimg.cn/20190326155245200.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbUJpbmc=,size_16,color_FFFFFF,t_70" alt="image"><br><img src="https://img-blog.csdnimg.cn/20190326155233351.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbUJpbmc=,size_16,color_FFFFFF,t_70" alt="image"></p><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>初学者在用 terminal 操作 npm 的时候，经常会混用 <code>root</code> 和 普通用户。<br>由于分不清全局安装和局部安装的区别，才会出现乱用 <code>root</code> 的问题。</p><p>一般来说，全局安装就用 <code>root</code> 安装。<br>局部安装就用普通用户。</p><p>原文链接：<a href="https://blog.csdn.net/kimbing/article/details/88821182">https://blog.csdn.net/kimbing/article/details/88821182</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在安装插件的时候出现这样的错误，权限不够，是因为之前用 &lt;code&gt;root&lt;/code&gt; 用户进行了局部安装npm包的操作，留下所属权为 &lt;code&gt;root&lt;/code&gt; 的文件，导致普通用户无法访问 &lt;code&gt;root&lt;/code&gt;的文件内容。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="问题记录" scheme="http://blog.jnlk.com/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="NPM" scheme="http://blog.jnlk.com/tags/NPM/"/>
+    
+    <category term="转载" scheme="http://blog.jnlk.com/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm 速度过慢的解决方案</title>
+    <link href="http://blog.jnlk.com/2021/02/14/npm-%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://blog.jnlk.com/2021/02/14/npm-%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2021-02-14T14:26:55.000Z</published>
+    <updated>2022-04-07T17:20:52.506Z</updated>
+    
+    <content type="html"><![CDATA[<p>因为npm连接的数据源网站太慢，可以使用淘宝提供的npm数据源，</p><span id="more"></span><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure><hr><p>使用NPM（<a href="http://lib.csdn.net/base/nodejs">Node.js</a>包管理工具）安装依赖时速度特别慢，为了安装Express，执行命令后两个多小时都没安装成功，最后只能取消安装，笔者20M带宽，应该不是我网络的原因，后来在网上找了好久才找到一种最佳解决办法，在安装时可以手动指定从哪个镜像服务器获取资源，我们可以使用阿里巴巴在国内的镜像服务器，命令如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -gd express --registry=http://registry.npm.taobao.org</span><br></pre></td></tr></table></figure><p>只需要使用–registry参数指定镜像服务器地址，为了避免每次安装都需要<code>--registry</code>参数，可以使用如下命令进行永久设置：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http:/bash</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">换了国内镜像，安装速度就很快了。</span><br></pre></td></tr></table></figure><hr><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install cnpm -g</span><br></pre></td></tr></table></figure><p>或者</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install cnpm -g --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure><p>应该都是可以的额。<br>cnpm安装后，直接用cnpm解决被墙的问题。<br>或者直接配置registry为淘宝的registry,后面还是使用npm</p><p>来源网址：<a href="https://www.cnblogs.com/sddai/p/9388261.html">https://www.cnblogs.com/sddai/p/9388261.html</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;因为npm连接的数据源网站太慢，可以使用淘宝提供的npm数据源，&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="问题记录" scheme="http://blog.jnlk.com/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="NPM" scheme="http://blog.jnlk.com/tags/NPM/"/>
+    
+    <category term="转载" scheme="http://blog.jnlk.com/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>First Post - 利用 hexo 博客系统结合 Coding Pages 创建个人博客</title>
+    <link href="http://blog.jnlk.com/2021/02/14/First-Post-%E5%88%A9%E7%94%A8-hexo-%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%BB%93%E5%90%88-Coding-Pages-%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://blog.jnlk.com/2021/02/14/First-Post-%E5%88%A9%E7%94%A8-hexo-%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%BB%93%E5%90%88-Coding-Pages-%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <published>2021-02-14T12:14:35.000Z</published>
+    <updated>2022-04-07T17:20:52.505Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Hello World!</p></blockquote><p>这是我在博客中写下的第一句话，我想，这应该是我第一篇关于应用方面的正式教程。</p><span id="more"></span><p>利用 Coding Pages 配合 hexo 框架搭建博客，好处有这么几条：</p><ol><li>可以很方便地配合 Coding 的 Cloud Studio 服务；</li><li>访问速度快，且有腾讯云支持，自定义功能更高，且备案等流程更为便捷；</li><li>无需自建服务器，且能轻松进行自动化构建。</li></ol><h2 id="在-Coding-中快速搭建-hexo-个人博客"><a href="#在-Coding-中快速搭建-hexo-个人博客" class="headerlink" title="在 Coding 中快速搭建 hexo 个人博客"></a>在 Coding 中快速搭建 hexo 个人博客</h2><p>Coding 静态网站部署原名为 <code>Coding Pages</code>，和 Github 上的“Github Pages”差不多一样。</p><p>而 hexo 则是一款基于 <code>Node.js</code> 的静态博客框架，且使用 <code>Markdown</code> 解析文章。</p><p>两者结合使用十分简单，而且方便配置。</p><p>下面，教程开始。</p><hr><h2 id="步骤一：创建-CODING-项目"><a href="#步骤一：创建-CODING-项目" class="headerlink" title="步骤一：创建 CODING 项目"></a>步骤一：创建 CODING 项目</h2><ol><li>在 Coding 中新建项目；</li><li>选择并创建 DevOps 项目；</li></ol><p><img src="https://help-assets.codehub.cn/enterprise/20201027151849.png" alt="img"></p><ol start="3"><li>填写项目名称后，点击 <code>完成创建 </code>按钮，即可完成项目创建。</li></ol><h2 id="步骤二：创建静态网站"><a href="#步骤二：创建静态网站" class="headerlink" title="步骤二：创建静态网站"></a>步骤二：创建静态网站</h2><ol><li>进入项目面板以后，在左侧栏找到 <code>持续部署 - 静态网站</code>。</li></ol><blockquote><p>注意，首次使用 Coding 的静态网站服务是需要进行实名验证的，并且要在腾讯云后台进行一些操作。</p></blockquote><p><img src="https://help-assets.codehub.cn/enterprise/20201027152018.png" alt="img"></p><ol start="2"><li>点击 <code>新建静态网站</code>，进入表单，选择如图所示，当然了，网站名称自己随便填写就可以了。部署的节点可以选择香港，海外网站无需备案。</li></ol><p><img src="https://help-assets.codehub.cn/enterprise/20201027152337.png" alt="img"></p><ol start="3"><li>表单填写完成后点击 <code>确定</code> 即可提交。</li></ol><h2 id="步骤三：等待部署"><a href="#步骤三：等待部署" class="headerlink" title="步骤三：等待部署"></a>步骤三：等待部署</h2><ol><li>创建成功后，耐心等待静态网站部署完成，状态会由 <code>部署中</code> 变为 <code>部署成功</code>。</li></ol><p><img src="https://help-assets.codehub.cn/enterprise/20201027160113.png" alt="img"></p><ol start="2"><li>部署成功以后，Coding 静态网站自动给你一个 <code>访问地址</code>，复制粘贴到链接栏即可访问。至此，部署的流程全部完成。</li></ol><p><img src="https://help-assets.codehub.cn/enterprise/20201027160302.png" alt="img"></p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是我在博客中写下的第一句话，我想，这应该是我第一篇关于应用方面的正式教程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="行动记录" scheme="http://blog.jnlk.com/categories/%E8%A1%8C%E5%8A%A8%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="hexo" scheme="http://blog.jnlk.com/tags/hexo/"/>
+    
+    <category term="原创" scheme="http://blog.jnlk.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+</feed>
